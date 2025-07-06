@@ -1,8 +1,39 @@
+# Python環境
 .venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# パッケージビルド
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# 環境変数
 .env
-.python-version
+.env.local
+.env.*.local
+
+# IDE・エディター
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS固有
+.DS_Store
+Thumbs.db
+
+# プロジェクト固有
 chroma_db/
 .cursor/
 uv.lock 
