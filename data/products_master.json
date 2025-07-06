@@ -1,0 +1,179 @@
+{
+    "products": [
+      {
+        "product_id": "WE-001",
+        "product_name": "TechPods Pro Max",
+        "category": "ワイヤレスイヤホン",
+        "price": 24800,
+        "stock_quantity": 125,
+        "release_date": "2023-11-15",
+        "manufacturer": "AudioTech Industries",
+        "description": "TechPods Pro Maxは、プロフェッショナル向けに設計された最上位モデルのワイヤレスイヤホンです。業界最高クラスのアクティブノイズキャンセリング機能と、ハイレゾ対応の高音質ドライバーを搭載。長時間の使用でも疲れない人間工学に基づいたデザインを採用しています。",
+        "features": [
+          "業界最高レベルのノイズキャンセリング（-42dB）",
+          "LDAC/aptX Adaptive対応でハイレゾ音源も高音質再生",
+          "最大35時間の連続再生（ケース込み）",
+          "IPX5防水規格で運動時も安心",
+          "マルチポイント接続で2台同時接続可能"
+        ],
+        "specifications": {
+          "driver": "12mm ダイナミック型",
+          "frequency_response": "20Hz - 40kHz",
+          "bluetooth_version": "5.3",
+          "supported_codecs": ["SBC", "AAC", "aptX", "aptX Adaptive", "LDAC"],
+          "charging_time": {
+            "earphones": "1.5時間",
+            "case": "2時間"
+          },
+          "weight": {
+            "earphone_single": "7.2g",
+            "case": "58g"
+          },
+          "available_colors": ["ミッドナイトブラック", "パールホワイト", "スペースグレー"]
+        },
+        "tags": ["ハイレゾ", "ノイズキャンセリング", "防水", "長時間再生", "プレミアム"]
+      },
+      {
+        "product_id": "WE-002",
+        "product_name": "TechPods Air",
+        "category": "ワイヤレスイヤホン",
+        "price": 12800,
+        "stock_quantity": 342,
+        "release_date": "2024-01-20",
+        "manufacturer": "AudioTech Industries",
+        "description": "軽量コンパクトなデザインで、日常使いに最適なワイヤレスイヤホン。初めてワイヤレスイヤホンを使う方にもおすすめの、使いやすさと音質のバランスが取れたモデルです。",
+        "features": [
+          "超軽量設計（片耳4.5g）",
+          "クリアな通話品質（cVc8.0ノイズキャンセリング）",
+          "最大24時間再生（ケース込み）",
+          "タッチセンサーで簡単操作",
+          "急速充電対応（15分で2時間再生）"
+        ],
+        "specifications": {
+          "driver": "8mm ダイナミック型",
+          "frequency_response": "20Hz - 20kHz",
+          "bluetooth_version": "5.2",
+          "supported_codecs": ["SBC", "AAC", "aptX"],
+          "charging_time": {
+            "earphones": "1時間",
+            "case": "1.5時間"
+          },
+          "weight": {
+            "earphone_single": "4.5g",
+            "case": "35g"
+          },
+          "available_colors": ["ホワイト", "ブラック", "ミントグリーン", "サクラピンク"]
+        },
+        "tags": ["軽量", "初心者向け", "コスパ", "通話品質", "急速充電"]
+      },
+      {
+        "product_id": "WE-003",
+        "product_name": "SportsBuds X",
+        "category": "ワイヤレスイヤホン",
+        "price": 8980,
+        "stock_quantity": 28,
+        "release_date": "2023-06-10",
+        "manufacturer": "FitAudio",
+        "description": "スポーツシーンに特化した、外れにくく快適な装着感のワイヤレスイヤホン。汗や雨に強いIPX7防水仕様で、激しい運動でも安心して使用できます。",
+        "features": [
+          "IPX7完全防水（水洗い可能）",
+          "イヤーフック付きで激しい動きでも外れない",
+          "低音強化設計でワークアウトのモチベーションアップ",
+          "外音取り込み機能で安全性確保",
+          "最大12時間連続再生"
+        ],
+        "specifications": {
+          "driver": "10mm ダイナミック型",
+          "frequency_response": "20Hz - 20kHz",
+          "bluetooth_version": "5.1",
+          "supported_codecs": ["SBC", "AAC"],
+          "charging_time": {
+            "total": "2時間"
+          },
+          "weight": {
+            "earphone_single_with_hook": "12g"
+          },
+          "available_colors": ["ブラック", "レッド", "ネイビー"]
+        },
+        "tags": ["スポーツ", "防水IPX7", "イヤーフック", "運動用", "外音取り込み"]
+      },
+      {
+        "product_id": "SW-001",
+        "product_name": "TechWatch Ultra",
+        "category": "スマートウォッチ",
+        "price": 45800,
+        "stock_quantity": 67,
+        "release_date": "2024-02-01",
+        "manufacturer": "TechMart Original",
+        "description": "TechMart独自開発のフラッグシップスマートウォッチ。健康管理機能とスマート機能を高度に統合し、ビジネスからスポーツまであらゆるシーンで活躍します。",
+        "features": [
+          "1.8インチ有機ELディスプレイ（常時表示対応）",
+          "血中酸素濃度、心拍数、睡眠の24時間モニタリング",
+          "100種類以上のワークアウトモード",
+          "最大14日間のバッテリー持続",
+          "5ATM防水でスイミング対応"
+        ],
+        "specifications": {
+          "display": {
+            "size": "1.8インチ",
+            "type": "AMOLED",
+            "resolution": "466×466ピクセル"
+          },
+          "os": "TechOS 2.0",
+          "sensors": ["心拍", "血中酸素", "加速度", "ジャイロ", "GPS", "気圧計"],
+          "battery": {
+            "capacity": "450mAh",
+            "life": "最大14日間"
+          },
+          "charging_time": "約2時間（ワイヤレス充電対応）",
+          "weight": "48g（バンド除く）",
+          "compatibility": {
+            "ios": "13以降",
+            "android": "8.0以降"
+          }
+        },
+        "tags": ["健康管理", "フィットネス", "5ATM防水", "長時間バッテリー", "GPS"]
+      },
+      {
+        "product_id": "MB-001",
+        "product_name": "PowerBank Pro 20000",
+        "category": "モバイルバッテリー",
+        "price": 5980,
+        "stock_quantity": 523,
+        "release_date": "2023-09-01",
+        "manufacturer": "ChargeTech",
+        "description": "大容量20000mAhながら、コンパクトで持ち運びやすいモバイルバッテリー。最新のGaN技術により、従来品より30%小型化を実現しました。",
+        "features": [
+          "20000mAhの大容量（スマホ約5回分充電）",
+          "USB PD 65W急速充電対応",
+          "3ポート同時充電可能",
+          "残量デジタル表示",
+          "パススルー充電対応"
+        ],
+        "specifications": {
+          "capacity": {
+            "mah": 20000,
+            "wh": 74
+          },
+          "input": {
+            "type": "USB-C",
+            "max_power": "65W"
+          },
+          "output": {
+            "usb_c": {
+              "ports": 2,
+              "max_power": "65W"
+            },
+            "usb_a": {
+              "ports": 1,
+              "max_power": "22.5W"
+            }
+          },
+          "dimensions": "142×68×28mm",
+          "weight": "385g",
+          "included_accessories": ["USB-C to Cケーブル", "収納ポーチ"]
+        },
+        "tags": ["大容量", "急速充電", "PD対応", "パススルー", "デジタル表示"]
+      }
+    ]
+  }
