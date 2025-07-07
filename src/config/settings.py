@@ -1,6 +1,5 @@
 import os
 from dataclasses import dataclass
-from typing import Optional
 from dotenv import load_dotenv
 
 
@@ -21,6 +20,7 @@ class Settings:
     support_file: str = "support_info.txt"
     
     default_search_results: int = 3
+    chunk_strategy: str = "unified"
     
     @classmethod
     def from_env(cls) -> 'Settings':
@@ -42,5 +42,6 @@ class Settings:
             products_file=os.getenv("PRODUCTS_FILE", cls.products_file),
             faq_file=os.getenv("FAQ_FILE", cls.faq_file),
             support_file=os.getenv("SUPPORT_FILE", cls.support_file),
-            default_search_results=int(os.getenv("DEFAULT_SEARCH_RESULTS", str(cls.default_search_results)))
+            default_search_results=int(os.getenv("DEFAULT_SEARCH_RESULTS", str(cls.default_search_results))),
+            chunk_strategy=os.getenv("CHUNK_STRATEGY", cls.chunk_strategy)
         ) 

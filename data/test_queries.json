@@ -1,0 +1,144 @@
+{
+  "test_queries": [
+    {
+      "query_id": "Q001",
+      "query": "TechPods Pro Maxの価格は？",
+      "expected_products": ["WE-001"],
+      "query_type": "direct_product_query",
+      "description": "商品名による直接検索"
+    },
+    {
+      "query_id": "Q002",
+      "query": "ノイズキャンセリング機能があるイヤホンを教えて",
+      "expected_products": ["WE-001", "WE-002"],
+      "query_type": "feature_query",
+      "description": "機能による検索"
+    },
+    {
+      "query_id": "Q003",
+      "query": "防水のイヤホンが欲しい",
+      "expected_products": ["WE-001", "WE-003"],
+      "query_type": "feature_query",
+      "description": "防水機能による検索"
+    },
+    {
+      "query_id": "Q004",
+      "query": "スポーツで使えるイヤホンは？",
+      "expected_products": ["WE-003"],
+      "query_type": "use_case_query",
+      "description": "用途による検索"
+    },
+    {
+      "query_id": "Q005",
+      "query": "15000円以下のイヤホン",
+      "expected_products": ["WE-002", "WE-003"],
+      "query_type": "price_query",
+      "description": "価格条件による検索"
+    },
+    {
+      "query_id": "Q006",
+      "query": "バッテリー持ちが良いイヤホン",
+      "expected_products": ["WE-001"],
+      "query_type": "specification_query",
+      "description": "バッテリー性能による検索"
+    },
+    {
+      "query_id": "Q007",
+      "query": "軽いイヤホンが欲しい",
+      "expected_products": ["WE-002"],
+      "query_type": "specification_query",
+      "description": "重量による検索"
+    },
+    {
+      "query_id": "Q008",
+      "query": "健康管理ができるデバイス",
+      "expected_products": ["SW-001"],
+      "query_type": "feature_query",
+      "description": "健康管理機能による検索"
+    },
+    {
+      "query_id": "Q009",
+      "query": "水泳で使える製品",
+      "expected_products": ["SW-001", "WE-003"],
+      "query_type": "use_case_query",
+      "description": "水泳での使用可能性"
+    },
+    {
+      "query_id": "Q010",
+      "query": "スマートフォンを充電できるもの",
+      "expected_products": ["MB-001"],
+      "query_type": "feature_query",
+      "description": "充電機能による検索"
+    },
+    {
+      "query_id": "Q011",
+      "query": "持ち運びやすいモバイルバッテリー",
+      "expected_products": ["MB-001"],
+      "query_type": "feature_query",
+      "description": "携帯性による検索"
+    },
+    {
+      "query_id": "Q012",
+      "query": "LDAC対応のイヤホン",
+      "expected_products": ["WE-001"],
+      "query_type": "specification_query",
+      "description": "特定コーデック対応"
+    },
+    {
+      "query_id": "Q013",
+      "query": "一番安い商品は？",
+      "expected_products": ["MB-001"],
+      "query_type": "price_query",
+      "description": "価格最安値検索"
+    },
+    {
+      "query_id": "Q014",
+      "query": "Bluetooth 5.3対応の製品",
+      "expected_products": ["WE-001"],
+      "query_type": "specification_query",
+      "description": "Bluetooth仕様による検索"
+    },
+    {
+      "query_id": "Q015",
+      "query": "初心者におすすめのイヤホン",
+      "expected_products": ["WE-002"],
+      "query_type": "use_case_query",
+      "description": "使用者タイプによる検索"
+    },
+    {
+      "query_id": "Q016",
+      "query": "GPS機能があるデバイス",
+      "expected_products": ["SW-001"],
+      "query_type": "feature_query",
+      "description": "GPS機能による検索"
+    },
+    {
+      "query_id": "Q017",
+      "query": "急速充電対応の製品",
+      "expected_products": ["WE-002", "MB-001"],
+      "query_type": "feature_query",
+      "description": "急速充電機能による検索"
+    },
+    {
+      "query_id": "Q018",
+      "query": "外音取り込み機能があるイヤホン",
+      "expected_products": ["WE-003"],
+      "query_type": "feature_query",
+      "description": "外音取り込み機能による検索"
+    },
+    {
+      "query_id": "Q019",
+      "query": "2万円以上の高級商品",
+      "expected_products": ["WE-001", "SW-001"],
+      "query_type": "price_query",
+      "description": "高価格帯商品検索"
+    },
+    {
+      "query_id": "Q020",
+      "query": "有機ELディスプレイ搭載製品",
+      "expected_products": ["SW-001"],
+      "query_type": "specification_query",
+      "description": "ディスプレイ仕様による検索"
+    }
+  ]
+} 
