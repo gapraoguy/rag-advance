@@ -1,15 +1,15 @@
-import sys
 import logging
+import sys
 
-from presentation.cli.application import CLIApplication
 from config.logging_config import setup_logging
+from presentation.cli.application import CLIApplication
 
 
 def main() -> None:
     """メインエントリーポイント"""
     setup_logging()
     logger = logging.getLogger(__name__)
-    
+
     try:
         app = CLIApplication()
         app.initialize()
@@ -20,4 +20,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main() 
+    main()

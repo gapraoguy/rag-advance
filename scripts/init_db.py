@@ -1,12 +1,14 @@
-from config.settings import Settings
-from infrastructure.repositories.json_product_repository import JsonProductRepository
-from infrastructure.repositories.json_faq_repository import JsonFAQRepository
-from infrastructure.repositories.chroma_vector_search_repository import ChromaVectorSearchRepository
-from application.services.indexing.indexing_service import IndexingService
 import logging
+
+from application.services.indexing.indexing_service import IndexingService
+from config.settings import Settings
+from infrastructure.repositories.chroma_vector_search_repository import ChromaVectorSearchRepository
+from infrastructure.repositories.json_faq_repository import JsonFAQRepository
+from infrastructure.repositories.json_product_repository import JsonProductRepository
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
 
 def main():
     """
@@ -27,13 +29,12 @@ def main():
 
     logger.info("GRANULAR商品戦略xQA_PAIR FAQ戦略でインデックス化を実行します...")
     result = indexing_service.index_data(
-        vector_repo,
-        product_strategy="granular",
-        faq_strategy="qa_pair"
+        vector_repo, product_strategy="granular", faq_strategy="qa_pair"
     )
     logger.info(f"インデックス化完了: {result}")
     print("DB初期化が完了しました。詳細:")
     print(result)
 
+
 if __name__ == "__main__":
-    main() 
+    main()
