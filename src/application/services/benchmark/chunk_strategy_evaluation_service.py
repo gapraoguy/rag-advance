@@ -3,7 +3,6 @@ from typing import List, Dict, Any, Tuple
 from pathlib import Path
 import logging
 
-from domain.entities.query_result import Document
 from domain.repositories.vector_search_repository import VectorSearchRepository
 from config.settings import Settings
 
@@ -59,22 +58,35 @@ class SearchEvaluationService:
             for test_query in self.test_queries:
                 query_id = test_query["query_id"]
                 query_text = test_query["query"]
-                expected_products = set(test_query["expected_products"])
                 query_type = test_query["query_type"]
+                
+                expected_products = set(test_query.get("expected_products", []))
+                expected_faqs = set(test_query.get("expected_faqs", []))
                 
                 try:
                     search_results = vector_repo.search(query_text, top_k)
                     
                     found_products = set()
+                    found_faqs = set()
+                    
                     for doc in search_results:
-                        if "product_id" in doc.metadata:
+                        data_type = doc.metadata.get("data_type", "product")
+                        if data_type == "faq" and "faq_id" in doc.metadata:
+                            found_faqs.add(doc.metadata["faq_id"])
+                        elif "product_id" in doc.metadata:
                             found_products.add(doc.metadata["product_id"])
                     
-                    precision, recall, f1 = self._calculate_metrics(
-                        expected_products, found_products
-                    )
+                    if expected_faqs:
+                        precision, recall, f1 = self._calculate_metrics(
+                            expected_faqs, found_faqs
+                        )
+                        has_relevant = len(expected_faqs.intersection(found_faqs)) > 0
+                    else:
+                        precision, recall, f1 = self._calculate_metrics(
+                            expected_products, found_products
+                        )
+                        has_relevant = len(expected_products.intersection(found_products)) > 0
                     
-                    has_relevant = len(expected_products.intersection(found_products)) > 0
                     if has_relevant:
                         relevant_found += 1
                     
@@ -83,14 +95,17 @@ class SearchEvaluationService:
                         "query": query_text,
                         "query_type": query_type,
                         "expected_products": list(expected_products),
+                        "expected_faqs": list(expected_faqs),
                         "found_products": list(found_products),
+                        "found_faqs": list(found_faqs),
                         "precision": precision,
                         "recall": recall,
                         "f1_score": f1,
                         "has_relevant": has_relevant,
                         "search_results": [
                             {
-                                "product_id": doc.metadata.get("product_id", "unknown"),
+                                "id": doc.metadata.get("faq_id" if doc.metadata.get("data_type") == "faq" else "product_id", "unknown"),
+                                "data_type": doc.metadata.get("data_type", "product"),
                                 "chunk_section": doc.metadata.get("chunk_section", "unknown"),
                                 "score": doc.score,
                                 "text_preview": doc.page_content[:100] + "..."

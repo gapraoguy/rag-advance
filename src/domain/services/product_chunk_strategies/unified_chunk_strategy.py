@@ -1,10 +1,10 @@
 from typing import List
 from domain.entities.product import Product
 from domain.entities.chunk import Chunk
-from domain.services.chunk_strategy import ChunkStrategy
+from domain.services.product_chunk_strategy import ProductChunkStrategy
 
 
-class UnifiedChunkStrategy(ChunkStrategy):
+class UnifiedChunkStrategy(ProductChunkStrategy):
     """全情報統合型チャンク戦略
     
     商品の全情報を1つのチャンクにまとめる戦略

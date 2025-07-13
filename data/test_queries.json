@@ -139,6 +139,111 @@
       "expected_products": ["SW-001"],
       "query_type": "specification_query",
       "description": "ディスプレイ仕様による検索"
+    },
+    {
+      "query_id": "F001",
+      "query": "送料はいくらですか？",
+      "expected_faqs": ["GEN-002"],
+      "query_type": "general_faq",
+      "description": "送料に関するFAQ"
+    },
+    {
+      "query_id": "F002",
+      "query": "注文後どのくらいで届きますか？",
+      "expected_faqs": ["GEN-001"],
+      "query_type": "general_faq",
+      "description": "配送期間に関するFAQ"
+    },
+    {
+      "query_id": "F003",
+      "query": "返品はできますか？",
+      "expected_faqs": ["GEN-004"],
+      "query_type": "general_faq",
+      "description": "返品に関するFAQ"
+    },
+    {
+      "query_id": "F004",
+      "query": "イヤホンが片方だけ聞こえません",
+      "expected_faqs": ["WE-002"],
+      "query_type": "troubleshooting_faq",
+      "description": "イヤホントラブルのFAQ"
+    },
+    {
+      "query_id": "F005",
+      "query": "ノイズキャンセリングとは何ですか？",
+      "expected_faqs": ["WE-004"],
+      "query_type": "technical_faq",
+      "description": "技術説明のFAQ"
+    },
+    {
+      "query_id": "F006",
+      "query": "TechPods Pro MaxとTechPods Airの違いは？",
+      "expected_faqs": ["WE-001"],
+      "query_type": "comparison_faq",
+      "description": "商品比較のFAQ"
+    },
+    {
+      "query_id": "F007",
+      "query": "運動に適したイヤホンは？",
+      "expected_faqs": ["WE-003"],
+      "query_type": "recommendation_faq",
+      "description": "おすすめ商品のFAQ"
+    },
+    {
+      "query_id": "F008",
+      "query": "スマートウォッチはiPhoneで使えますか？",
+      "expected_faqs": ["SW-001"],
+      "query_type": "compatibility_faq",
+      "description": "互換性に関するFAQ"
+    },
+    {
+      "query_id": "F009",
+      "query": "水泳で使用できますか？",
+      "expected_faqs": ["SW-003"],
+      "query_type": "usage_faq",
+      "description": "使用方法のFAQ"
+    },
+    {
+      "query_id": "F010",
+      "query": "モバイルバッテリーは飛行機に持ち込めますか？",
+      "expected_faqs": ["MB-002"],
+      "query_type": "regulation_faq",
+      "description": "規制に関するFAQ"
+    },
+    {
+      "query_id": "F011",
+      "query": "Bluetoothが不安定です",
+      "expected_faqs": ["TROUBLE-001"],
+      "query_type": "troubleshooting_faq",
+      "description": "接続トラブルのFAQ"
+    },
+    {
+      "query_id": "F012",
+      "query": "充電ができません",
+      "expected_faqs": ["TROUBLE-002"],
+      "query_type": "troubleshooting_faq",
+      "description": "充電トラブルのFAQ"
+    },
+    {
+      "query_id": "F013",
+      "query": "ワイヤレスイヤホンの選び方を教えて",
+      "expected_faqs": ["GUIDE-001"],
+      "query_type": "guide_faq",
+      "description": "購入ガイドのFAQ"
+    },
+    {
+      "query_id": "F014",
+      "query": "健康管理に役立ちますか？",
+      "expected_faqs": ["GUIDE-002"],
+      "query_type": "guide_faq",
+      "description": "健康管理ガイドのFAQ"
+    },
+    {
+      "query_id": "F015",
+      "query": "モバイルバッテリーの容量はどう選べばいい？",
+      "expected_faqs": ["GUIDE-003"],
+      "query_type": "guide_faq",
+      "description": "容量選択ガイドのFAQ"
     }
   ]
 } 

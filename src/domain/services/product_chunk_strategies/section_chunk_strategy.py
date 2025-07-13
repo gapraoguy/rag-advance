@@ -1,10 +1,10 @@
 from typing import List
 from domain.entities.product import Product
 from domain.entities.chunk import Chunk
-from domain.services.chunk_strategy import ChunkStrategy
+from domain.services.product_chunk_strategy import ProductChunkStrategy
 
 
-class SectionChunkStrategy(ChunkStrategy):
+class SectionChunkStrategy(ProductChunkStrategy):
     """セクション分割型チャンク戦略
     
     商品情報を基本情報・特徴・仕様の3つのセクションに分割する戦略

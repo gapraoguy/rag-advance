@@ -3,7 +3,6 @@ import logging
 
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
-from langchain.schema import Document as LangchainDocument
 
 from domain.entities.query_result import Document
 from domain.repositories.vector_search_repository import VectorSearchRepository

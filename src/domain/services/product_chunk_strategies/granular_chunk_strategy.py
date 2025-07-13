@@ -1,10 +1,10 @@
 from typing import List
 from domain.entities.product import Product
 from domain.entities.chunk import Chunk
-from domain.services.chunk_strategy import ChunkStrategy
+from domain.services.product_chunk_strategy import ProductChunkStrategy
 
 
-class GranularChunkStrategy(ChunkStrategy):
+class GranularChunkStrategy(ProductChunkStrategy):
     """細粒度分割型チャンク戦略
     
     商品情報を基本情報と各特徴・各仕様項目に細かく分割する戦略

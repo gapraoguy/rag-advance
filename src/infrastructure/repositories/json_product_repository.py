@@ -12,7 +12,13 @@ logger = logging.getLogger(__name__)
 
 
 class JsonProductRepository(ProductRepository):
-    """JSONファイルから商品データを読み込むリポジトリ実装"""
+    """JSONファイルから商品データを読み込むリポジトリ実装
+    
+    制限事項:
+    - ファイル更新の自動検知なし（アプリ再起動まで古いキャッシュを使用）
+    - 全商品に差分があった場合、リアルタイム反映不可  
+    - プロトタイプ用途に適している
+    """
     
     def __init__(self, settings: Settings):
         self.data_dir = Path(settings.data_directory)
@@ -20,7 +26,11 @@ class JsonProductRepository(ProductRepository):
         self._products_cache: Optional[List[Product]] = None
     
     def get_all_products(self) -> List[Product]:
-        """すべての商品を取得"""
+        """すべての商品を取得
+        
+        注意: ファイル変更があっても初回読み込み後はキャッシュを返す
+        リアルタイム更新が必要な場合はアプリケーション再起動が必要
+        """
         if self._products_cache is not None:
             return self._products_cache
         
@@ -49,11 +59,3 @@ class JsonProductRepository(ProductRepository):
         except Exception as e:
             logger.error(f"Failed to load products: {e}")
             raise
-    
-    def get_product_by_id(self, product_id: str) -> Optional[Product]:
-        """IDから商品を取得"""
-        products = self.get_all_products()
-        for product in products:
-            if product.product_id == product_id:
-                return product
-        return None 

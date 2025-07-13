@@ -4,8 +4,8 @@ from domain.entities.product import Product
 from domain.entities.chunk import Chunk
 
 
-class ChunkStrategy(ABC):
-    """チャンク戦略の抽象インターフェース"""
+class ProductChunkStrategy(ABC):
+    """商品チャンク戦略の抽象インターフェース"""
     
     @abstractmethod
     def create_chunks(self, product: Product) -> List[Chunk]:
